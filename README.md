@@ -60,9 +60,11 @@ npm install express multer
 ```
 
 ### 2. Download the YOLOv8 Model (best.pt)
-The **YOLOv8 model** used here is a pre-trained deep learning model. You can get the `best.pt` file from:
+The **YOLOv8 model** used here is a pre-trained deep learning model. You can get the `best.pt` by setting up the colab environment and running this
 
-[Car Damage YOLO Model - PySeek](https://pyseek.com/2024/12/car-damage-detection-using-python-yolov8/)
+```sh
+!yolo task=detect mode=train model=yolov8l.pt data=../content/drive/MyDrive/Datasets/CarDent/data.yaml epochs=50 imgsz=640
+```
 
 After downloading, place `best.pt` in the `Weights/` folder.
 
